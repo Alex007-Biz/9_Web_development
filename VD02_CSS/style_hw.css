@@ -1,23 +1,43 @@
 .card{
     width: 400px;
-    height: 650px;
+    height: 450px;
     background-color: burlywood;
     border-radius: 50px;
+    margin: 10px;
 }
 .photo {
-    height: 20%;
+    height: 50%;
     padding: 20px;
 }
 .photo img {
-    width: 300px;
+    height: 250px;
 }
 
 img {
-    position: relative;
-    left: 7%;
+    display: block;
+    margin: 0 auto;
     border-radius: 20px;
 }
 .info {
     height: 20%;
     padding: 20px;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.first {
+    color: #5070cf;
+    font-weight : 600;
+}
+
+.container {
+    display: flex;
 }
