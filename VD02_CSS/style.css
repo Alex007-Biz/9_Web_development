@@ -1,3 +1,37 @@
-body {
-    background-color: crimson;
+p {
+    background-color: rgb(220, 100, 90);
+   }
+
+#test {
+    background-color: #00fff0;
+
+}
+.text {
+    background-color: aquamarine;
+    font-size : 34px;
+    font-family : Comic Sans MS;
+    font-weight : 100;
+    width: 50%;
+    height: 200px;
+    border-color: #f019f0;
+    border-style: solid;
+    border-width; 10px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 50px;
+    height: 50px;
+    background-color: #c000c0;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+
+
+
 }

@@ -1,0 +1,27 @@
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #c000c0;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+div:hover {
+    background-color: #00cbf6;
+    width: 150px;
+    height: 150px;
+    transition: 1s;
+}
+a:link{
+    color: deeppink;
+}
+a:visited{
+    color: olivedrab;
+}
+a:active{
+    color: royalblue;
+}
+a:hover{
+    color: yellow;
+}

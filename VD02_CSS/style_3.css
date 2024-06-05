@@ -1,0 +1,30 @@
+
+div {
+    width: 200px;
+    height: 100px;
+    background-color: #c000c0;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+}
+
+h1::first-letter{
+    color: #c0c000;
+    border-radius: 5px;
+    background-color: #f0f070;
+    }
+h1::before{
+    content: 'Город ';
+    color: #c0c0аа;
+    font-size: 50px;
+    border-radius: 5px;
+    background-color: #f0f070;
+}
+h1::after{
+    content: '- такой ';
+    color: #c0c0аа;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #f0f070;
+}
