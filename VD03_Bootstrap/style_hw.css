@@ -1,0 +1,18 @@
+.carousel slide{
+    height: 200px;
+    border-radius: 50px;
+}
+
+.carousel-item {
+    height: 650px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.info {
+    height: 20%;
+    padding: 20px;
+}
