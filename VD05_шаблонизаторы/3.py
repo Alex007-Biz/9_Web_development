@@ -5,10 +5,13 @@ app = Flask(__name__)
 @app.route("/")
 def films():
     context = {
-        "caption" : "Фильмы про Гаррика",
-        "list" : ["Нина", "Вася", "Антон", "Никита"]
+        "poem" : ["Я помню чудное мгновенье",
+                  "передо мной явилась ты",
+                  "как мимолетное виденье",
+                  "как гений чистой красоты"
+                  ]
     }
-    return render_template("shablon_2.html", **context)
+    return render_template("shablon_3.html", **context)
 
 @app.route("/shablon")
 def films2():
