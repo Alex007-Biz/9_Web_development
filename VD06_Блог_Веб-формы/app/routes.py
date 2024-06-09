@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, url_for
 from app import app
 
-post = []
+posts = []
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':

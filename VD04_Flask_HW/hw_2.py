@@ -8,7 +8,7 @@ def films():
 
 @app.route("/blog/")
 def blog():
-    return render_template("blog_01.html")
+    return render_template("blog.html")
 
 @app.route("/contacts/")
 def contacts():
