@@ -13,10 +13,9 @@
             {{ form.name(size=32) }}<br>
             {% for error in form.name.errors %} # Отображение ошибок валидации
                 <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         </p>
-        <p>
-            {{ form.submit() }}
-        </p>
+        <p>{{ form.submit() }}</p>
     </form>
 </body>
 </html>
