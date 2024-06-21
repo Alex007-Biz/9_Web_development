@@ -21,7 +21,7 @@ def get_weather(city):
 
 def get_news():
     api_key = "8168fe78679946859018bb0117c978ca"
-    url = f"https://newsapi.org/v2/top-headlines?country=ru&apiKey={api_key}"
+    url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={api_key}"
     response = requests.get(url)
     return response.json().get('articles', [])
 
