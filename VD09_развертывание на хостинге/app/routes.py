@@ -10,8 +10,8 @@ from flask_login import login_user, logout_user, current_user, login_required
 def index():
     return render_template('index.html')
 
-@app.route(rule: '/register', methods=['GET', 'POST'])
-def registration():
+@app.route('/register', methods=['GET', 'POST'])
+def register():
     if current_user.is_authenticated:
         return redirect(url_for('index'))
     form = RegistrationForm()
@@ -20,11 +20,11 @@ def registration():
         user = User(username=form.username.data, password=hashed_password)
         db.session.add(user)
         db.session.commit()
-        flash('Вы успешно зарегистрировались!')
+        flash('Вы успешно зарегистрировались!', category='success')
         return redirect(url_for('login'))
     return render_template("register.html")
 
-@app.route(rule: '/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('index'))
@@ -35,8 +35,7 @@ def login():
             login_user(user)
             return redirect(url_for('index'))
         else:
-            flash('неверно введены данные аккаунта')
-
+            flash('неверно введены данные аккаунта', category='danger')
     return render_template("login.html")
 
 @app.route('/logout')
