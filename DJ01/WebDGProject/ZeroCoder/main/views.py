@@ -4,10 +4,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return render(request, template_name: 'main/index.html')
+    return render(request, 'main/index.html')
 
-# def new(request):
-#     return HttpResponse("<h1>Это вторая страница на Django!!</h1>")
+def new(request):
+    return render(request, 'main/new.html')
 #
 # def data(request):
 #     return HttpResponse("<h1>Это страница Data на Django!!</h1>")
