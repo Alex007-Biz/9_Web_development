@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    {% block title %}
+    <title>Plitkanadom.ru - Django</title>
+    {% endblock %}
+</head>
+<body>
+    <aside class="bg-light p-4">
+        <img src="{% static 'main/img/logotype.svg' %}" alt="лого www.plitkanadom.ru" class="img-fluid">
+        <h1 class="text-center">PlitkaDjango</h1>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Второстепенная</a>
+            </li>
+        </ul>
+    </aside>
+
+<!--    {% include 'main/nav.html' %}-->
+
+    <main class="container mt-4">
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
