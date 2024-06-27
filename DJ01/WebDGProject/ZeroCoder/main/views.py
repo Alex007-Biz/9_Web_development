@@ -11,9 +11,9 @@ def index(request):
 
 def new(request):
     return render(request, 'main/new.html')
-#
-# def data(request):
-#     return HttpResponse("<h1>Это страница Data на Django!!</h1>")
-#
-# def test(request):
-#     return HttpResponse("<h1>Это страница Test на Django!</h1>")
+
+def goods(request):
+    return render(request, 'main/goods.html')
+
+def service(request):
+    return render(request, 'main/service.html')
