@@ -6,13 +6,22 @@
 
 {% block content %}
 <h1>Страница для добавления новостей</h1>
+
 <div>
     <form method="post" class="form-group">
         {% csrf_token %}
-        <input type="text" class="form-control" placeholder="Заголовок новости"> <br>
-        <input type="text" class="form-control" placeholder="Краткое описание новости"> <br>
-        <textarea class="form-control" placeholder="Новость"></textarea> <br>
-        <input type="date" class="form-control"> <br>
+        <input type="text" class="form-control" placeholder="Заголовок новости">
+        {{ form.title }}
+        <br>
+        <input type="text" class="form-control" placeholder="Краткое описание новости">
+        {{ form.short_description }}
+        <br>
+        <textarea class="form-control" placeholder="Новость"></textarea>
+        {{ form.text }}
+        <br>
+        <input type="date" class="form-control">
+        {{ form.pub_date }}
+        <br>
         <input type="time" class="form-control"> <br>
         <button type="submit" class="btn btn-primary">Добавить новость</button>
     </form>
