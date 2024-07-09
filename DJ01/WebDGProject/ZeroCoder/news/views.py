@@ -11,5 +11,12 @@ def home(request):
 
 
 def create_news(request):
+    error = ""
+    if request.method == 'POST':
+        form = News_postForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = "Данные были заполнены некорректно"
     form = News_postForm()
-    return render(request, 'news/add_new_post.html', {'form': form})
+    return render(request, 'news/add_new_post.html', {'form': form, 'errors': error})
