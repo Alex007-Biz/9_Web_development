@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import News_post
 from .forms import News_postForm
 
@@ -16,6 +16,7 @@ def create_news(request):
         form = News_postForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('news_home')
         else:
             error = "Данные были заполнены некорректно"
     form = News_postForm()
